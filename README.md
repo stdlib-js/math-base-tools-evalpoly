@@ -148,6 +148,22 @@ for ( i = 0; i < 100; i++ ) {
 
 <!-- /.examples -->
 
+<!-- Section for related `stdlib` packages. Do not manually edit this section, as it is automatically populated. -->
+
+<section class="related">
+
+* * *
+
+## See Also
+
+-   [`@stdlib/math/base/tools/evalrational`][@stdlib/math/base/tools/evalrational]: evaluate a rational function.
+
+</section>
+
+<!-- /.related -->
+
+<!-- Section for all links. Make sure to keep an empty line after the `section` element and another before the `/section` close. -->
+
 
 <section class="main-repo" >
 
@@ -206,6 +222,12 @@ Copyright &copy; 2016-2021. The Stdlib [Authors][stdlib-authors].
 [polynomial]: https://en.wikipedia.org/wiki/Polynomial
 
 [mdn-csp]: https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP
+
+<!-- <related-links> -->
+
+[@stdlib/math/base/tools/evalrational]: https://github.com/stdlib-js/math-base-tools-evalrational
+
+<!-- </related-links> -->
 
 </section>
 
