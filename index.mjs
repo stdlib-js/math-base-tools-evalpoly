@@ -1,0 +1,4 @@
+// Copyright (c) 2022 The Stdlib Authors. License is Apache-2.0: http://www.apache.org/licenses/LICENSE-2.0
+/// <reference types="./index.d.ts" />
+import r from"https://cdn.jsdelivr.net/gh/stdlib-js/utils-define-nonenumerable-read-only-property@esm/index.mjs";var e=function(r,e){var n,t;if((t=r.length)<2||0===e)return 0===t?0:r[0];for(n=r[t-=1]*e+r[t-1],t-=2;t>=0;)n=n*e+r[t],t-=1;return n},n=e;var t=e,o=function(r){var e,t,o,u;if(r.length>500)return function(e){return n(r,e)};if(e="return function evalpoly(x){",0===(t=r.length))e+="return 0.0;";else if(1===t)e+="return "+r[0]+";";else{for(e+="if(x===0.0){return "+r[0]+";}",e+="return "+r[0],o=t-1,u=1;u<t;u++)e+="+x*",u<o&&(e+="("),e+=r[u];for(u=0;u<o-1;u++)e+=")";e+=";"}return e+="}",e+="//# sourceURL=evalpoly.factory.js",new Function(e)()};r(t,"factory",o);var u=t;export{u as default,o as factory};
+//# sourceMappingURL=index.mjs.map
