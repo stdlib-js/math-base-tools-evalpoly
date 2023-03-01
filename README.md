@@ -164,7 +164,7 @@ for ( i = 0; i < 100; i++ ) {
 
 ## See Also
 
--   <span class="package-name">[`@stdlib/math/base/tools/evalrational`][@stdlib/math/base/tools/evalrational]</span><span class="delimiter">: </span><span class="description">evaluate a rational function.</span>
+-   <span class="package-name">[`@stdlib/math-base/tools/evalrational`][@stdlib/math/base/tools/evalrational]</span><span class="delimiter">: </span><span class="description">evaluate a rational function.</span>
 
 </section>
 
