@@ -65,13 +65,18 @@ where `c_n, c_{n-1}, ..., c_0` are constants.
 ## Usage
 
 ```javascript
+import evalpoly from 'https://cdn.jsdelivr.net/gh/stdlib-js/math-base-tools-evalpoly@esm/index.mjs';
+```
+The previous example will load the latest bundled code from the esm branch. Alternatively, you may load a specific version by loading the file from one of the [tagged bundles](https://github.com/stdlib-js/math-base-tools-evalpoly/tags). For example,
+
+```javascript
 import evalpoly from 'https://cdn.jsdelivr.net/gh/stdlib-js/math-base-tools-evalpoly@v0.1.1-esm/index.mjs';
 ```
 
 You can also import the following named exports from the package:
 
 ```javascript
-import { factory } from 'https://cdn.jsdelivr.net/gh/stdlib-js/math-base-tools-evalpoly@v0.1.1-esm/index.mjs';
+import { factory } from 'https://cdn.jsdelivr.net/gh/stdlib-js/math-base-tools-evalpoly@esm/index.mjs';
 ```
 
 #### evalpoly( c, x )
@@ -129,7 +134,7 @@ v = polyval( 5.0 ); // => 3*5^0 + 2*5^1 + 1*5^2
 import randu from 'https://cdn.jsdelivr.net/gh/stdlib-js/random-base-randu@esm/index.mjs';
 import round from 'https://cdn.jsdelivr.net/gh/stdlib-js/math-base-special-round@esm/index.mjs';
 import Float64Array from 'https://cdn.jsdelivr.net/gh/stdlib-js/array-float64@esm/index.mjs';
-import evalpoly from 'https://cdn.jsdelivr.net/gh/stdlib-js/math-base-tools-evalpoly@v0.1.1-esm/index.mjs';
+import evalpoly from 'https://cdn.jsdelivr.net/gh/stdlib-js/math-base-tools-evalpoly@esm/index.mjs';
 
 var polyval;
 var coef;
