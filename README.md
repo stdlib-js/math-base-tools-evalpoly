@@ -33,7 +33,7 @@ limitations under the License.
 
 [![NPM version][npm-image]][npm-url] [![Build Status][test-image]][test-url] [![Coverage Status][coverage-image]][coverage-url] <!-- [![dependencies][dependencies-image]][dependencies-url] -->
 
-> Evaluate a [polynomial][polynomial].
+> Evaluate a [polynomial][polynomial] using double-precision floating-point arithmetic.
 
 <section class="intro">
 
@@ -58,38 +58,32 @@ where `c_n, c_{n-1}, ..., c_0` are constants.
 
 <!-- /.intro -->
 
+<section class="installation">
 
+## Installation
+
+```bash
+npm install @stdlib/math-base-tools-evalpoly
+```
+
+Alternatively,
+
+-   To load the package in a website via a `script` tag without installation and bundlers, use the [ES Module][es-module] available on the [`esm`][esm-url] branch (see [README][esm-readme]).
+-   If you are using Deno, visit the [`deno`][deno-url] branch (see [README][deno-readme] for usage intructions).
+-   For use in Observable, or in browser/node environments, use the [Universal Module Definition (UMD)][umd] build available on the [`umd`][umd-url] branch (see [README][umd-readme]).
+
+The [branches.md][branches-url] file summarizes the available branches and displays a diagram illustrating their relationships.
+
+To view installation and usage instructions specific to each branch build, be sure to explicitly navigate to the respective README files on each branch, as linked to above.
+
+</section>
 
 <section class="usage">
 
 ## Usage
 
-To use in Observable,
-
 ```javascript
-evalpoly = require( 'https://cdn.jsdelivr.net/gh/stdlib-js/math-base-tools-evalpoly@umd/browser.js' )
-```
-
-To vendor stdlib functionality and avoid installing dependency trees for Node.js, you can use the UMD server build:
-
-```javascript
-var evalpoly = require( 'path/to/vendor/umd/math-base-tools-evalpoly/index.js' )
-```
-
-To include the bundle in a webpage,
-
-```html
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/math-base-tools-evalpoly@umd/browser.js"></script>
-```
-
-If no recognized module system is present, access bundle contents via the global scope:
-
-```html
-<script type="text/javascript">
-(function () {
-    window.evalpoly;
-})();
-</script>
+var evalpoly = require( '@stdlib/math-base-tools-evalpoly' );
 ```
 
 #### evalpoly( c, x )
@@ -105,7 +99,7 @@ The coefficients should be ordered in **ascending** degree, thus matching summat
 
 #### evalpoly.factory( c )
 
-Uses code generation to in-line coefficients and return a `function` for evaluating a [polynomial][polynomial].
+Uses code generation to in-line coefficients and return a function for evaluating a [polynomial][polynomial] using double-precision floating-point arithmetic.
 
 ```javascript
 var polyval = evalpoly.factory( [ 3.0, 2.0, 1.0 ] );
@@ -138,51 +132,28 @@ v = polyval( 5.0 ); // => 3*5^0 + 2*5^1 + 1*5^2
 
 <!-- eslint no-undef: "error" -->
 
-```html
-<!DOCTYPE html>
-<html lang="en">
-<body>
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/random-base-randu@umd/browser.js"></script>
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/math-base-special-round@umd/browser.js"></script>
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/array-float64@umd/browser.js"></script>
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/math-base-tools-evalpoly@umd/browser.js"></script>
-<script type="text/javascript">
-(function () {
+```javascript
+var discreteUniform = require( '@stdlib/random-array-discrete-uniform' );
+var uniform = require( '@stdlib/random-base-uniform' );
+var evalpoly = require( '@stdlib/math-base-tools-evalpoly' );
 
-var polyval;
-var coef;
-var sign;
+// Create an array of random coefficients:
+var coef = discreteUniform( 10, -100, 100 );
+
+// Evaluate the polynomial at random values:
 var v;
 var i;
-
-// Create an array of random coefficients...
-coef = new Float64Array( 10 );
-for ( i = 0; i < coef.length; i++ ) {
-    if ( randu() < 0.5 ) {
-        sign = -1.0;
-    } else {
-        sign = 1.0;
-    }
-    coef[ i ] = sign * round( randu()*100.0 );
-}
-
-// Evaluate the polynomial at random values...
 for ( i = 0; i < 100; i++ ) {
-    v = randu() * 100.0;
+    v = uniform( 0.0, 100.0 );
     console.log( 'f(%d) = %d', v, evalpoly( coef, v ) );
 }
 
-// Generate an `evalpoly` function...
-polyval = evalpoly.factory( coef );
+// Generate an `evalpoly` function:
+var polyval = evalpoly.factory( coef );
 for ( i = 0; i < 100; i++ ) {
-    v = (randu()*100.0) - 50.0;
+    v = uniform( -50.0, 50.0 );
     console.log( 'f(%d) = %d', v, polyval( v ) );
 }
-
-})();
-</script>
-</body>
-</html>
 ```
 
 </section>
@@ -281,7 +252,7 @@ Copyright &copy; 2016-2024. The Stdlib [Authors][stdlib-authors].
 
 <!-- <related-links> -->
 
-[@stdlib/math/base/tools/evalrational]: https://github.com/stdlib-js/math-base-tools-evalrational/tree/umd
+[@stdlib/math/base/tools/evalrational]: https://github.com/stdlib-js/math-base-tools-evalrational
 
 <!-- </related-links> -->
 
