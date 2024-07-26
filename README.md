@@ -65,13 +65,13 @@ where `c_n, c_{n-1}, ..., c_0` are constants.
 ## Usage
 
 ```javascript
-import evalpoly from 'https://cdn.jsdelivr.net/gh/stdlib-js/math-base-tools-evalpoly@esm/index.mjs';
+import evalpoly from 'https://cdn.jsdelivr.net/gh/stdlib-js/math-base-tools-evalpoly@v0.2.2-esm/index.mjs';
 ```
 
 You can also import the following named exports from the package:
 
 ```javascript
-import { factory } from 'https://cdn.jsdelivr.net/gh/stdlib-js/math-base-tools-evalpoly@esm/index.mjs';
+import { factory } from 'https://cdn.jsdelivr.net/gh/stdlib-js/math-base-tools-evalpoly@v0.2.2-esm/index.mjs';
 ```
 
 #### evalpoly( c, x )
@@ -128,7 +128,7 @@ v = polyval( 5.0 ); // => 3*5^0 + 2*5^1 + 1*5^2
 
 import discreteUniform from 'https://cdn.jsdelivr.net/gh/stdlib-js/random-array-discrete-uniform@esm/index.mjs';
 import uniform from 'https://cdn.jsdelivr.net/gh/stdlib-js/random-base-uniform@esm/index.mjs';
-import evalpoly from 'https://cdn.jsdelivr.net/gh/stdlib-js/math-base-tools-evalpoly@esm/index.mjs';
+import evalpoly from 'https://cdn.jsdelivr.net/gh/stdlib-js/math-base-tools-evalpoly@v0.2.2-esm/index.mjs';
 
 // Create an array of random coefficients:
 var coef = discreteUniform( 10, -100, 100 );
