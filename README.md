@@ -67,6 +67,11 @@ where `c_n, c_{n-1}, ..., c_0` are constants.
 To use in Observable,
 
 ```javascript
+evalpoly = require( 'https://cdn.jsdelivr.net/gh/stdlib-js/math-base-tools-evalpoly@umd/browser.js' )
+```
+The previous example will load the latest bundled code from the umd branch. Alternatively, you may load a specific version by loading the file from one of the [tagged bundles](https://github.com/stdlib-js/math-base-tools-evalpoly/tags). For example,
+
+```javascript
 evalpoly = require( 'https://cdn.jsdelivr.net/gh/stdlib-js/math-base-tools-evalpoly@v0.2.3-umd/browser.js' )
 ```
 
@@ -79,7 +84,7 @@ var evalpoly = require( 'path/to/vendor/umd/math-base-tools-evalpoly/index.js' )
 To include the bundle in a webpage,
 
 ```html
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/math-base-tools-evalpoly@v0.2.3-umd/browser.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/math-base-tools-evalpoly@umd/browser.js"></script>
 ```
 
 If no recognized module system is present, access bundle contents via the global scope:
@@ -144,7 +149,7 @@ v = polyval( 5.0 ); // => 3*5^0 + 2*5^1 + 1*5^2
 <body>
 <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/random-array-discrete-uniform@umd/browser.js"></script>
 <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/random-base-uniform@umd/browser.js"></script>
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/math-base-tools-evalpoly@v0.2.3-umd/browser.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/math-base-tools-evalpoly@umd/browser.js"></script>
 <script type="text/javascript">
 (function () {
 
