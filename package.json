@@ -39,7 +39,8 @@
   "dependencies": {
     "@stdlib/function-ctor": "^0.2.3",
     "@stdlib/types": "^0.4.3",
-    "@stdlib/utils-define-nonenumerable-read-only-property": "^0.2.3"
+    "@stdlib/utils-define-nonenumerable-read-only-property": "^0.2.3",
+    "@stdlib/error-tools-fmtprodmsg": "^0.2.3"
   },
   "devDependencies": {
     "@stdlib/math-base-assert-is-nan": "^0.2.3",
